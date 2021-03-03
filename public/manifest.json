@@ -1,0 +1,13 @@
+{
+    "name": "Ma liste de courses",
+    "short_name": "Liste courses",
+    "icons": [
+        {
+            "src": "/list.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone"
+}
