@@ -14,8 +14,9 @@
       }
     },
     methods: {
-      updateUsername() {
-        this.$emit('name', this.nameValue);
+      addItem() {
+        this.$emit('name', this.name);
+        this.name = '';
       }
     },  
   }
@@ -30,7 +31,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: #ebebeb;
+    background: #350189;
     padding: 10px 0;
   }
   input{
