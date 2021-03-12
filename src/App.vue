@@ -83,6 +83,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+ul {
+  max-width: 100vw;
+}
+
 .delete {
   padding: 5px;
   border-radius: 0px;

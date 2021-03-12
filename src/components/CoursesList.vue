@@ -24,7 +24,12 @@ export default {
 <style scoped>
 li {
   list-style-type: none;
-  margin-bottom: 10px;
+  margin: 10px 10px;
+}
+p{
+  text-align: left;
+  width: 90%;
+  word-wrap: break-word;
 }
 hr {
   margin-top: 10px;
