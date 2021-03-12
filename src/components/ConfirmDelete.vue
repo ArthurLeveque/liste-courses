@@ -27,8 +27,8 @@ export default {
   .message{
     z-index: 2;
     position: fixed;
-    top : calc(50vh  - 50px);
-    left: calc(50vw  - 100px);
+    top : calc(50vh  - 60px);
+    left: calc(50vw  - 110px);
     background-color: white;
     padding: 10px;
     display: flex;

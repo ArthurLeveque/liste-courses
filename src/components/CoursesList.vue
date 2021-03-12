@@ -41,7 +41,7 @@ hr {
 }
 button {
   margin-left: 15px;
-  font-size: 20px;
+  font-size: 25px;
   color: red;
   background: none;
   border: none;
