@@ -4,7 +4,6 @@
     <list-input @name="addItem"></list-input>
     <ul>
         <courses-list 
-        class="articlesShow" 
         v-for="(item, index) in list" 
         :index="index" :item="item" 
         :key="index" 
