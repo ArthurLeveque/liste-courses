@@ -3,7 +3,15 @@
     <h1>Liste de courses</h1>
     <list-input @name="addItem"></list-input>
     <ul>
-        <courses-list class="articlesShow" v-for="(name, index) in list" :index="index" :name="name" :key="index" @delete-click="removeItem"></courses-list>
+        <courses-list 
+        class="articlesShow" 
+        v-for="(item, index) in list" 
+        :index="index" :item="item" 
+        :key="index" 
+        @delete-click="removeItem" 
+        @click="check(index)"
+        :class="['articlesShow', {checked : item.checked}]">
+        </courses-list>
     </ul>
     <button class="delete" @click="deleteAll">Supprimer la liste</button>
   </div>
@@ -43,7 +51,11 @@ export default {
       this.saveList();
     },
     addItem(name) {
-      this.list.push(name);
+      const item = {
+        name: name,
+        checked: false
+      }
+      this.list.push(item);
       this.saveList();
     },
     saveList() {
@@ -62,6 +74,10 @@ export default {
       });
       this.saveList();
       this.showConfirm = false;
+    },
+    check(index) {
+      this.list[index].checked = !this.list[index].checked;
+      this.saveList();
     }
   },
 }
@@ -91,6 +107,11 @@ ul {
   padding: 5px;
   border-radius: 0px;
   margin: 10px 0;
+}
+
+.checked div p{
+  text-decoration: line-through;
+  color: grey;
 }
 
 #app {

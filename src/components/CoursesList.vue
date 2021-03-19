@@ -1,7 +1,7 @@
 <template>
 <li>
     <div class="courses-list">
-        <p>{{ name }}</p>
+        <p>{{ item.name }}</p>
         <button @click="triggerDeleteClick">x</button>
     </div>
     <hr>
@@ -11,7 +11,7 @@
 <script>
 
 export default {
-    props : ['name', 'index'],
+    props : ['item', 'index'],
     emits : ['deleteClick'],
     methods : {
        triggerDeleteClick() {
